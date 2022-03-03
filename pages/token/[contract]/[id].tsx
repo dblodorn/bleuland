@@ -3,7 +3,7 @@ import { AuctionManager } from '@zoralabs/manage-auction-hooks'
 import { getToken, TokenProps } from '../../../services/getToken'
 import { Head } from '../../../components/HeadMeta'
 import { PageWrapper } from '../../../styles/components'
-import { RenderNFTData } from '../../../components/utils/RenderNFTData'
+import { NFTDataDisplayer } from '../../../components/utils'
 import { TokenPreview, BidButton } from '../../../components/manage'
 
 export default function Token({
@@ -32,7 +32,7 @@ export default function Token({
             <FullComponents.ProofAuthenticity />
             <FullComponents.NFTProperties />
             <FullComponents.BidHistory />
-            <RenderNFTData />
+            <NFTDataDisplayer />
           </AuctionManager>
         </NFTFullPage>
       </PageWrapper>

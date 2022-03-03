@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from 'react'
-import { useInput } from './useInput'
+import { useInput } from '../../hooks/useInput'
 import { useWalletButton } from '@zoralabs/simple-wallet-provider'
 import { useContractInfo } from '../../hooks/useContractInfo'
 import { css } from '@emotion/react'

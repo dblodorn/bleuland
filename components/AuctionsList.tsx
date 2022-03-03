@@ -10,7 +10,6 @@ export const AuctionsList = ({ tokens }: { tokens: any[] }) => {
       {tokens &&
         tokens.map((token) => {
           const tokenInfo = FetchStaticData.getIndexerServerTokenInfo(token)
-          console.log(tokenInfo)
           return (
             <div
               key={`${tokenInfo.tokenContract}-${tokenInfo.tokenId}`}

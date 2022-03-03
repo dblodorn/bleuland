@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { NFTDataContext } from '@zoralabs/nft-components'
 
-export const RenderNFTData = () => {
+export const NFTDataDisplayer = () => {
   const { nft } = useContext(NFTDataContext)
   if (!nft) {
     return null
