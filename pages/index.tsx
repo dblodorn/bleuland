@@ -7,20 +7,23 @@ import { useContext } from 'react'
 import { ContractDataContext } from '../context/ContractDataContext'
 import { RawDisplayer } from '../components/utils'
 
+/* VANILLA */
+import * as styles from "../vanilla/styles.css";
+
 export default function Home({ tokens }: { tokens: any }) {
   const { contractData } = useContext(ContractDataContext)
 
   return (
     <>
-      <div css={css`padding: 0 var(--space-sm);`}>
-        <RawDisplayer data={contractData} />
-      </div>
       <PageWrapper grid>
         <Head
           title={contractData?.name}
         />
         <AuctionsList tokens={tokens} />
       </PageWrapper>
+      <div className={styles.card}>
+        <RawDisplayer data={contractData} />
+      </div>
     </>
   )
 }

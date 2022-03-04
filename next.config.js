@@ -1,4 +1,8 @@
-module.exports = {
+const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin')
+
+const withVanillaExtract = createVanillaExtractPlugin()
+
+module.exports = withVanillaExtract({
   webpack: (config) => {
     config.module.rules.push({
       test: /\.md$/,
@@ -9,4 +13,4 @@ module.exports = {
   future: {
     webpack5: true,
   },
-}
+})

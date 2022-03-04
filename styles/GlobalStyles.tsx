@@ -3,8 +3,6 @@ import { media, buttonStyle } from './mixins'
 import { returnBreakpoint } from './breakpoints'
 
 export default function GlobalStyles({theme}: {theme?: any}) {
-  console.log('theme', theme)
-  
   return (
     <Global
       styles={css`
@@ -12,6 +10,11 @@ export default function GlobalStyles({theme}: {theme?: any}) {
           @font-face {
             font-family: ThemeFont;
             src: url(${theme.fonts.primary.uri});
+          }
+
+          @font-face {
+            font-family: ThemeFontSecondary;
+            src: url(${theme.fonts.secondary.uri});
           }
 
           /* COLORS */
