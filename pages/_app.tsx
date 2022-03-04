@@ -9,7 +9,7 @@ import GlobalStyles from '../styles/GlobalStyles'
 import { NETWORK_ID, RPC_URL, CONTRACT_ADDRESSES } from '../utils/env-vars'
 import { Header } from '../components/Header'
 import { ContractDataProvider, ContractDataContext } from '../context/ContractDataContext'
-import { useContext, useEffect, ReactElement } from 'react'
+import { useContext, useEffect, ReactElement, Fragment } from 'react'
 import { useContractRead, WagmiProvider } from 'wagmi'
 import { assignInlineVars } from "@vanilla-extract/dynamic";
 import { vars } from "../vanilla/vars.css";
@@ -95,13 +95,13 @@ export default function CreateMarketplaceApp({
             style={mediaConfigurationStyles}
           >
             <ThemeWrapper>
-              <>
+              <Fragment>
                 <Header />
                 <NProgress color='#000000' showAfterMs={300} spinner={false} />
                 <main>
                   <Component {...pageProps} />
                 </main>
-              </>
+              </Fragment>
             </ThemeWrapper>
           </MediaConfiguration>
         </ContractDataProvider>
